@@ -206,7 +206,7 @@ public class DialogSolicitacoes extends JDialog {
 			}
 		});
 		button.setBackground(Color.WHITE);
-		button.setIcon(new ImageIcon(DialogSolicitacoes.class.getResource("/br/cefet/sepat/img/atualizar.png")));
+		button.setIcon(new ImageIcon(DialogSolicitacoes.class.getResource("/br/cefet/sicom/img/atualizar.png")));
 		button.setBounds(10, 484, 45, 41);
 		contentPane.add(button);
 		

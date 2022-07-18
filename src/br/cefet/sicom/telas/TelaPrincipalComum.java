@@ -97,7 +97,7 @@ public class TelaPrincipalComum extends JFrame {
 		contentPane.add(lblSiape1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(TelaPrincipalComum.class.getResource("/br/cefet/sepat/img/logoCEFET.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(TelaPrincipalComum.class.getResource("/br/cefet/sicom/img/logoCEFET.jpg")));
 		lblNewLabel.setBounds(137, 11, 76, 51);
 		contentPane.add(lblNewLabel);
 		

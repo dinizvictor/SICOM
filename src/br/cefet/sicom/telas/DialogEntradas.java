@@ -195,7 +195,7 @@ public class DialogEntradas extends JDialog {
 		contentPane.add(pesquisaTF);
 		pesquisaTF.setColumns(10);
 		
-		JLabel lblPerodo = new JLabel("Per\u00EDodo:");
+		JLabel lblPerodo = new JLabel("Período:");
 		lblPerodo.setForeground(new Color(0, 0, 128));
 		lblPerodo.setBounds(194, 70, 62, 14);
 		contentPane.add(lblPerodo);
@@ -209,7 +209,7 @@ public class DialogEntradas extends JDialog {
 			}
 		});
 		mesCB.setForeground(new Color(0, 0, 128));
-		mesCB.setModel(new DefaultComboBoxModel(new String[] {"", "Janeiro", "Fevereiro", "Mar\u00E7o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}));
+		mesCB.setModel(new DefaultComboBoxModel(new String[] {"", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}));
 		mesCB.setBounds(246, 67, 95, 20);
 		contentPane.add(mesCB);
 		
@@ -249,7 +249,7 @@ public class DialogEntradas extends JDialog {
 				
 			}
 		});
-		button.setIcon(new ImageIcon(DialogEntradas.class.getResource("/br/cefet/sepat/img/atualizar.png")));
+		button.setIcon(new ImageIcon(DialogEntradas.class.getResource("/br/cefet/sicom/img/atualizar.png")));
 		button.setBounds(10, 445, 45, 41);
 		contentPane.add(button);
 				

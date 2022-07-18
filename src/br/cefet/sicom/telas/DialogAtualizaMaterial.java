@@ -26,7 +26,6 @@ import javax.swing.table.DefaultTableModel;
 
 import br.cefet.sicom.dao.MaterialDao;
 import br.cefet.sicom.modelo.Material;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.modelo.Usuario;
 import br.cefet.sicom.sessao.Login;
 
@@ -86,7 +85,7 @@ public class DialogAtualizaMaterial extends JDialog {
 		materiaisTable.setModel(new DefaultTableModel(
 			objetos,
 			new String[] {
-				"Id", "Descri\u00E7\u00E3o", "Tipo de Unid.", "Saldo", "Categoria", "Localiza\u00E7\u00E3o"
+				"Id", "Descrição", "Tipo de Unid.", "Saldo", "Categoria", "Localização"
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {
@@ -111,13 +110,13 @@ public class DialogAtualizaMaterial extends JDialog {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblAtualizaoDeMateriais = new JLabel("Atualiza\u00E7\u00E3o de Materiais");
+		JLabel lblAtualizaoDeMateriais = new JLabel("Atualização de Materiais");
 		lblAtualizaoDeMateriais.setForeground(new Color(0, 0, 139));
 		lblAtualizaoDeMateriais.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblAtualizaoDeMateriais.setBounds(10, 11, 414, 23);
 		contentPane.add(lblAtualizaoDeMateriais);
 		
-		JLabel label_1 = new JLabel("Descri\u00E7\u00E3o:");
+		JLabel label_1 = new JLabel("Descrição:");
 		label_1.setForeground(new Color(0, 0, 128));
 		label_1.setBounds(10, 45, 61, 14);
 		contentPane.add(label_1);
@@ -201,7 +200,7 @@ public class DialogAtualizaMaterial extends JDialog {
 					Calendar c = new GregorianCalendar();
 					//Movimentacao mov = new Movimentacao(0, TipoDeAcao.ATUALIZACAO_DE_MATERIAL, mCopia.getIdMaterial()+"|"+mCopia.getDescricao()+"|"+mCopia.getCategoria()+"|"+mCopia.getLocalizacao()+"|"+mCopia.getSaldo()+"|"+mCopia.getTipoUnid(), c, l.getUsuario());
 					//MovimentacaoDao.cadastrar(mov);
-					JOptionPane.showMessageDialog(null, "Atualiza��o Realizada!");
+					JOptionPane.showMessageDialog(null, "Atualização Realizada!");
 					
 					refreshTable(ordenarCBTC, materiaisTC, pesquisaTFTC, objetosTC, materiaisTableTC);
 					
@@ -226,7 +225,7 @@ public class DialogAtualizaMaterial extends JDialog {
 		label.setBounds(193, 92, 84, 14);
 		contentPane.add(label);
 		
-		JLabel label_4 = new JLabel("Localiza\u00E7\u00E3o:");
+		JLabel label_4 = new JLabel("Localização:");
 		label_4.setForeground(new Color(0, 0, 128));
 		label_4.setBounds(193, 118, 84, 14);
 		contentPane.add(label_4);

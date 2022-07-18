@@ -10,7 +10,6 @@ import javax.swing.border.EmptyBorder;
 
 import br.cefet.sicom.dao.Conexao;
 import br.cefet.sicom.dao.UsuarioDao;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.modelo.TipoUsuario;
 import br.cefet.sicom.modelo.Usuario;
 import br.cefet.sicom.sessao.Login;
@@ -53,7 +52,7 @@ public class DialogCadastraUsuario extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		{
-			JLabel lblCadastroDeUsurio = new JLabel("Cadastro de Usu\u00E1rio");
+			JLabel lblCadastroDeUsurio = new JLabel("Cadastro de Usuário");
 			lblCadastroDeUsurio.setForeground(new Color(0, 0, 139));
 			lblCadastroDeUsurio.setFont(new Font("Calibri", Font.PLAIN, 23));
 			lblCadastroDeUsurio.setBounds(10, 11, 223, 23);
@@ -157,7 +156,7 @@ public class DialogCadastraUsuario extends JDialog {
 							
 						}
 						else{
-							JOptionPane.showMessageDialog(null, "Os campos Senha e Confirma��o devem ser iguais!");
+							JOptionPane.showMessageDialog(null, "Os campos Senha e Confirmação devem ser iguais!");
 						}
 						
 					}
@@ -166,7 +165,7 @@ public class DialogCadastraUsuario extends JDialog {
 					}
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "N�o h� conex�o com o banco de dados!");
+					JOptionPane.showMessageDialog(null, "Não há conexão com o banco de dados!");
 				}
 					
 				

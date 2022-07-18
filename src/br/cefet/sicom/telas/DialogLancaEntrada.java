@@ -15,7 +15,6 @@ import br.cefet.sicom.dao.EntradaDao;
 import br.cefet.sicom.dao.MaterialDao;
 import br.cefet.sicom.modelo.Entrada;
 import br.cefet.sicom.modelo.Material;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.sessao.Login;
 
 import java.awt.Color;
@@ -110,7 +109,7 @@ public class DialogLancaEntrada extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JLabel lblLanarEntrada = new JLabel("Lan\u00E7ar Entrada");
+		JLabel lblLanarEntrada = new JLabel("Lançar Entrada");
 		lblLanarEntrada.setForeground(new Color(0, 0, 139));
 		lblLanarEntrada.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblLanarEntrada.setBounds(10, 11, 174, 23);
@@ -164,7 +163,7 @@ public class DialogLancaEntrada extends JDialog {
 		btnFechar.setBounds(10, 182, 120, 23);
 		contentPanel.add(btnFechar);
 		
-		JButton btnLanar = new JButton("Lan\u00E7ar");
+		JButton btnLanar = new JButton("Lançar");
 		btnLanar.setBackground(new Color(255, 255, 255));
 		btnLanar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -183,7 +182,7 @@ public class DialogLancaEntrada extends JDialog {
 					//Movimentacao mov = new Movimentacao(0, TipoDeAcao.LANCAMENTO_DE_ENTRADA, m.getDescricao() +"|"+entrada.getQtd(), c, l.getUsuario());
 					//MovimentacaoDao.cadastrar(mov);
 					
-					JOptionPane.showMessageDialog(null, "Entrada lan�ada com sucesso!");
+					JOptionPane.showMessageDialog(null, "Entrada lançada com sucesso!");
 					
 					ArrayList<Material> materiais = new ArrayList<Material>();
 					refreshTable(ordenarCB, materiais, pesquisaTF, objetos, materiaisTable);

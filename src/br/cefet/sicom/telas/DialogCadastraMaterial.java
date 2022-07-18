@@ -26,7 +26,6 @@ import javax.swing.table.DefaultTableModel;
 
 import br.cefet.sicom.dao.MaterialDao;
 import br.cefet.sicom.modelo.Material;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.sessao.Login;
 
 import java.awt.event.KeyAdapter;
@@ -84,7 +83,7 @@ public class DialogCadastraMaterial extends JDialog {
 		materiaisTable.setModel(new DefaultTableModel(
 			objetos,
 			new String[] {
-				"Id", "Descri\u00E7\u00E3o", "Tipo de Unid.", "Saldo", "Categoria", "Localiza\u00E7\u00E3o"
+				"Id", "Descrição", "Tipo de Unid.", "Saldo", "Categoria", "Localização"
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {
@@ -117,7 +116,7 @@ public class DialogCadastraMaterial extends JDialog {
 		lblCadastroDeMateriais.setBounds(10, 11, 223, 23);
 		contentPane.add(lblCadastroDeMateriais);
 		
-		JLabel lblNewLabel = new JLabel("Descri\u00E7\u00E3o:");
+		JLabel lblNewLabel = new JLabel("Descrição:");
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setBounds(10, 45, 61, 14);
 		contentPane.add(lblNewLabel);
@@ -170,7 +169,7 @@ public class DialogCadastraMaterial extends JDialog {
 						
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "Material j� consta nos registros!");
+						JOptionPane.showMessageDialog(null, "Material já consta nos registros!");
 					}
 					
 				}
@@ -230,7 +229,7 @@ public class DialogCadastraMaterial extends JDialog {
 		lblCategoria.setBounds(193, 92, 84, 14);
 		contentPane.add(lblCategoria);
 		
-		JLabel lblLocalizao = new JLabel("Localiza\u00E7\u00E3o:");
+		JLabel lblLocalizao = new JLabel("Localização:");
 		lblLocalizao.setForeground(new Color(0, 0, 128));
 		lblLocalizao.setBounds(193, 120, 84, 14);
 		contentPane.add(lblLocalizao);

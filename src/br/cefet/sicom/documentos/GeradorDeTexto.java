@@ -85,7 +85,7 @@ public class GeradorDeTexto {
 	}
 	
 	public static String obterNomeMes(int mes){
-	    String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", 
+	    String[] meses = {"Janeiro", "Fevereiro", "Marï¿½o", "Abril", "Maio", "Junho", "Julho", 
 	                      "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 	    return meses[mes-1];
 	}
@@ -110,14 +110,14 @@ public class GeradorDeTexto {
 			Font f2 = new Font(FontFamily.HELVETICA, 14);
 			Font f3 = new Font(FontFamily.HELVETICA, 10);
 			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f1);
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova IguaÃ§u\nAlmoxarifado\n", f1);
 			p1.setAlignment(Element.ALIGN_CENTER);
 			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sepat/img/logo.png"));
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scalePercent(50f);
 			
-			Paragraph p2 = new Paragraph("Comprovante de Liberação de Material\n", f2);
+			Paragraph p2 = new Paragraph("Comprovante de LiberaÃ§Ã£o de Material\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
@@ -139,7 +139,7 @@ public class GeradorDeTexto {
 				
 			}
 			
-			Paragraph p4 = new Paragraph("\n\n\n_______________________________________\nSolicitante: "+ solicitante.getNome()+ " ("+ solicitante.getSiape() +")" +"\n\n_______________________________________\nAlmoxarife (Usuário): "+u.getNome()+ " ("+ u.getSiape() +")", f3);
+			Paragraph p4 = new Paragraph("\n\n\n_______________________________________\nSolicitante: "+ solicitante.getNome()+ " ("+ solicitante.getSiape() +")" +"\n\n_______________________________________\nAlmoxarife (Usuï¿½rio): "+u.getNome()+ " ("+ u.getSiape() +")", f3);
 			p4.setAlignment(Element.ALIGN_CENTER);
 			
 			doc.add(p1);
@@ -204,14 +204,14 @@ public class GeradorDeTexto {
 			Font f2 = new Font(FontFamily.HELVETICA, 14);
 			Font f3 = new Font(FontFamily.HELVETICA, 8);
 			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova IguaÃ§u\nAlmoxarifado\n", f2);
 			p1.setAlignment(Element.ALIGN_CENTER);
 			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sepat/img/logo.png"));
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scalePercent(40f);
 							
-			Paragraph p2 = new Paragraph("Relatório de Consumo Mensal\n"+ obterNomeMes(mes) +"\n", f2);
+			Paragraph p2 = new Paragraph("RelatÃ³rio de Consumo Mensal\n"+ obterNomeMes(mes) +"\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
@@ -219,13 +219,13 @@ public class GeradorDeTexto {
 			
 			PdfPTable table = new PdfPTable(8);
 			
-			table.addCell(new Phrase("ID Solicitação",f1));
+			table.addCell(new Phrase("ID SolicitaÃ§Ã£o",f1));
 			table.addCell(new Phrase("ID Material",f1));
 			table.addCell(new Phrase("Material",f1));
 			table.addCell(new Phrase("Qtd Fornecida",f1));
 			table.addCell(new Phrase("Solicitante",f1));
 			table.addCell(new Phrase("Siape",f1));
-			table.addCell(new Phrase("Usuário",f1));
+			table.addCell(new Phrase("UsuÃ¡rio",f1));
 			table.addCell(new Phrase("Data",f1));
 						
 			for(Solicitacao s : solicitacoes){
@@ -294,14 +294,14 @@ public class GeradorDeTexto {
 			Font f2 = new Font(FontFamily.HELVETICA, 14);
 			Font f3 = new Font(FontFamily.HELVETICA, 8);
 			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova IguaÃ§u\nAlmoxarifado\n", f2);
 			p1.setAlignment(Element.ALIGN_CENTER);
 			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sepat/img/logo.png"));
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scalePercent(40f);
 							
-			Paragraph p2 = new Paragraph("Relatório de Consumo da Manutenção\n"+ obterNomeMes(mes) +"\n", f2);
+			Paragraph p2 = new Paragraph("RelatÃ³rio de Consumo da ManutenÃ§Ã£o\n"+ obterNomeMes(mes) +"\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
@@ -309,13 +309,13 @@ public class GeradorDeTexto {
 			
 			PdfPTable table = new PdfPTable(8);
 			
-			table.addCell(new Phrase("ID Solicitação",f1));
+			table.addCell(new Phrase("ID SolicitaÃ§Ã£o",f1));
 			table.addCell(new Phrase("ID Material",f1));
 			table.addCell(new Phrase("Material",f1));
 			table.addCell(new Phrase("Qtd Fornecida",f1));
 			table.addCell(new Phrase("Solicitante",f1));
 			table.addCell(new Phrase("Siape",f1));
-			table.addCell(new Phrase("Usuário",f1));
+			table.addCell(new Phrase("UsuÃ¡rio",f1));
 			table.addCell(new Phrase("Data",f1));
 						
 			for(Solicitacao s : solicitacoes){
@@ -385,14 +385,14 @@ public class GeradorDeTexto {
 			Font f2 = new Font(FontFamily.HELVETICA, 14);
 			Font f3 = new Font(FontFamily.HELVETICA, 8);
 			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova IguaÃ§u\nAlmoxarifado\n", f2);
 			p1.setAlignment(Element.ALIGN_CENTER);
 			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sepat/img/logo.png"));
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scalePercent(40f);
 							
-			Paragraph p2 = new Paragraph("Relatório de Consumo Anual\n"+ ano +"\n", f2);
+			Paragraph p2 = new Paragraph("RelatÃ³rio de Consumo Anual\n"+ ano +"\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
@@ -400,13 +400,13 @@ public class GeradorDeTexto {
 			
 			PdfPTable table = new PdfPTable(8);
 			
-			table.addCell(new Phrase("ID Solicitação",f1));
+			table.addCell(new Phrase("ID SolicitaÃ§Ã£o",f1));
 			table.addCell(new Phrase("ID Material",f1));
 			table.addCell(new Phrase("Material",f1));
 			table.addCell(new Phrase("Qtd Fornecida",f1));
 			table.addCell(new Phrase("Solicitante",f1));
 			table.addCell(new Phrase("Siape",f1));
-			table.addCell(new Phrase("Usuário",f1));
+			table.addCell(new Phrase("UsuÃ¡rio",f1));
 			table.addCell(new Phrase("Data",f1));
 						
 			for(Solicitacao s : solicitacoes){
@@ -476,14 +476,14 @@ public class GeradorDeTexto {
 			Font f2 = new Font(FontFamily.HELVETICA, 14);
 			Font f3 = new Font(FontFamily.HELVETICA, 8);
 			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova IguaÃ§u\nAlmoxarifado\n", f2);
 			p1.setAlignment(Element.ALIGN_CENTER);
 			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sepat/img/logo.png"));
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
 			logo.setAlignment(Element.ALIGN_CENTER);
 			logo.scalePercent(50f);
 			
-			Paragraph p2 = new Paragraph("Relatório de Materiais Cadastrados\n", f2);
+			Paragraph p2 = new Paragraph("RelatÃ³rio de Materiais Cadastrados\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("\nData: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f3);
@@ -496,7 +496,7 @@ public class GeradorDeTexto {
 			table.addCell(new Phrase("Saldo",f1));
 			table.addCell(new Phrase("Tipo de Unidade",f1));
 			table.addCell(new Phrase("Categoria",f1));
-			table.addCell(new Phrase("Localização",f1));
+			table.addCell(new Phrase("LocalizaÃ§Ã£o",f1));
 						
 			for(Material m : materiais){
 				

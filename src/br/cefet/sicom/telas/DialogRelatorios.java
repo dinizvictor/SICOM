@@ -36,13 +36,13 @@ public class DialogRelatorios extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JLabel lblRelatrios = new JLabel("Relat\u00F3rios");
+		JLabel lblRelatrios = new JLabel("Relatórios");
 		lblRelatrios.setForeground(new Color(0, 0, 139));
 		lblRelatrios.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblRelatrios.setBounds(10, 11, 326, 23);
 		contentPanel.add(lblRelatrios);
 		
-		JButton btnPeriodo = new JButton("Por Per\u00EDodo");
+		JButton btnPeriodo = new JButton("Por Período");
 		btnPeriodo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -67,13 +67,13 @@ public class DialogRelatorios extends JDialog {
 		btnCategoria.setBounds(10, 160, 254, 23);
 		contentPanel.add(btnCategoria);
 		
-		JButton btnLiberaoDeMaterial = new JButton("Por Usu\u00E1rio");
+		JButton btnLiberaoDeMaterial = new JButton("Por Usuário");
 		btnLiberaoDeMaterial.setForeground(new Color(0, 0, 128));
 		btnLiberaoDeMaterial.setBackground(new Color(255, 255, 255));
 		btnLiberaoDeMaterial.setBounds(10, 194, 254, 23);
 		contentPanel.add(btnLiberaoDeMaterial);
 		
-		JButton btnMateriaisCadastrados = new JButton("Relat\u00F3rio Geral");
+		JButton btnMateriaisCadastrados = new JButton("Relatório Geral");
 		btnMateriaisCadastrados.setForeground(new Color(0, 0, 128));
 		btnMateriaisCadastrados.setBackground(new Color(255, 255, 255));
 		btnMateriaisCadastrados.setBounds(10, 253, 254, 23);
@@ -85,7 +85,7 @@ public class DialogRelatorios extends JDialog {
 		btnFechar.setBounds(10, 384, 254, 23);
 		contentPanel.add(btnFechar);
 		
-		JLabel lblSolicitaes = new JLabel("Solicita\u00E7\u00F5es:");
+		JLabel lblSolicitaes = new JLabel("Solicitações:");
 		lblSolicitaes.setForeground(new Color(0, 0, 128));
 		lblSolicitaes.setBounds(10, 68, 110, 14);
 		contentPanel.add(lblSolicitaes);

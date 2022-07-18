@@ -45,11 +45,11 @@ public class TelaPrincipalAdm extends JFrame {
 		contentPane.add(panel);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(TelaPrincipalAdm.class.getResource("/br/cefet/sepat/img/logoCEFET.jpg")));
+		label.setIcon(new ImageIcon(getClass().getResource("/br/cefet/sicom/img/logoCEFET.jpg")));
 		label.setBounds(134, 11, 76, 51);
 		panel.add(label);
 		
-		JLabel label_1 = new JLabel("Usu\u00E1rio:");
+		JLabel label_1 = new JLabel("Usuário:");
 		label_1.setForeground(new Color(0, 0, 128));
 		label_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		label_1.setBounds(10, 117, 83, 14);
@@ -74,7 +74,7 @@ public class TelaPrincipalAdm extends JFrame {
 		btnControle.setBounds(10, 192, 328, 35);
 		panel.add(btnControle);
 		
-		JButton btnVisualizarMovimentaes = new JButton("Visualizar Movimenta\u00E7\u00F5es");
+		JButton btnVisualizarMovimentaes = new JButton("Visualizar Movimentações");
 		btnVisualizarMovimentaes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -87,7 +87,7 @@ public class TelaPrincipalAdm extends JFrame {
 		btnVisualizarMovimentaes.setBounds(10, 238, 328, 35);
 		panel.add(btnVisualizarMovimentaes);
 		
-		JButton btnCadastrarUsurios = new JButton("Cadastrar Usu\u00E1rios");
+		JButton btnCadastrarUsurios = new JButton("Cadastrar Usuários");
 		btnCadastrarUsurios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -118,7 +118,7 @@ public class TelaPrincipalAdm extends JFrame {
 		label_2.setBounds(28, 73, 336, 14);
 		panel.add(label_2);
 		
-		JButton btnRelatrios = new JButton("Relat\u00F3rios");
+		JButton btnRelatrios = new JButton("Relatórios");
 		btnRelatrios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -128,7 +128,7 @@ public class TelaPrincipalAdm extends JFrame {
 		btnRelatrios.setBounds(10, 330, 328, 35);
 		panel.add(btnRelatrios);
 		
-		JButton btnSair = new JButton("Encerrar Sess\u00E3o");
+		JButton btnSair = new JButton("Encerrar Sessão");
 		btnSair.setBounds(10, 376, 328, 23);
 		panel.add(btnSair);
 		btnSair.setBackground(new Color(255, 255, 255));

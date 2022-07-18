@@ -1,4 +1,3 @@
-show databases;
 create database sicombd;
 
 use sicombd;

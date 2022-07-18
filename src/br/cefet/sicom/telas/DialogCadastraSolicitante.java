@@ -17,7 +17,6 @@ import javax.swing.border.EmptyBorder;
 import br.cefet.sicom.dao.SolicitanteDao;
 import br.cefet.sicom.modelo.Material;
 import br.cefet.sicom.modelo.Solicitante;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.sessao.Login;
 
 import java.awt.Color;
@@ -85,7 +84,7 @@ public class DialogCadastraSolicitante extends JDialog {
 		contentPane.add(setorTF);
 		setorTF.setColumns(10);
 		
-		JLabel lblOcupao = new JLabel("Ocupa\u00E7\u00E3o:");
+		JLabel lblOcupao = new JLabel("Ocupação:");
 		lblOcupao.setForeground(new Color(0, 0, 128));
 		lblOcupao.setBounds(37, 116, 86, 14);
 		contentPane.add(lblOcupao);
@@ -155,7 +154,7 @@ public class DialogCadastraSolicitante extends JDialog {
 					}
 					else{
 						
-						JOptionPane.showMessageDialog(null, "Solicitante j� existe nos registros!");
+						JOptionPane.showMessageDialog(null, "Solicitante já existe nos registros!");
 						
 					}
 					

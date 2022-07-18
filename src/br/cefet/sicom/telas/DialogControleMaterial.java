@@ -85,7 +85,7 @@ public class DialogControleMaterial extends JDialog {
 		materiaisTable.setModel(new DefaultTableModel(
 			objetos,
 			new String[] {
-				"Id", "Descri\u00E7\u00E3o", "Tipo de Unid.", "Saldo", "Categoria", "Localiza\u00E7\u00E3o"
+				"Id", "Descrição", "Tipo de Unid.", "Saldo", "Categoria", "Localização"
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {
@@ -135,7 +135,7 @@ public class DialogControleMaterial extends JDialog {
 		});
 				
 		lblOrdenarPor.setLabelFor(ordenarCB);
-		ordenarCB.setModel(new DefaultComboBoxModel(new String[] {"Por Ordem Alfab\u00E9tica", "Por Saldo", "Por Tipo de Unidade", "Por Categoria", "Por Localiza\u00E7\u00E3o"}));
+		ordenarCB.setModel(new DefaultComboBoxModel(new String[] {"Por Ordem Alfabética", "Por Saldo", "Por Tipo de Unidade", "Por Categoria", "Por Localização"}));
 		ordenarCB.setForeground(new Color(0, 0, 128));
 		ordenarCB.setBounds(78, 67, 164, 20);
 		contentPane.add(ordenarCB);
@@ -192,7 +192,7 @@ public class DialogControleMaterial extends JDialog {
 				if(materiaisTable.getSelectedRow() != -1 && !materiais.isEmpty()){
 					
 					int botoes = JOptionPane.YES_NO_OPTION;
-	                int resultado = JOptionPane.showConfirmDialog (null, "Deseja realmente excluir o material?","Confirma��o",botoes);
+	                int resultado = JOptionPane.showConfirmDialog (null, "Deseja realmente excluir o material?","Confirmação",botoes);
 
 	                if(resultado == JOptionPane.YES_OPTION){
 	                	
@@ -296,7 +296,7 @@ public class DialogControleMaterial extends JDialog {
 				
 			}
 		});
-		button.setIcon(new ImageIcon(DialogControleMaterial.class.getResource("/br/cefet/sepat/img/atualizar.png")));
+		button.setIcon(new ImageIcon(DialogControleMaterial.class.getResource("/br/cefet/sicom/img/atualizar.png")));
 		button.setBounds(10, 476, 45, 55);
 		contentPane.add(button);
 		
@@ -338,7 +338,7 @@ public class DialogControleMaterial extends JDialog {
 		btnEntradas.setBounds(65, 476, 150, 23);
 		contentPane.add(btnEntradas);
 		
-		JButton btnSolicitacoes = new JButton("Solicita\u00E7\u00F5es");
+		JButton btnSolicitacoes = new JButton("Solicitações");
 		btnSolicitacoes.setBackground(new Color(255, 255, 255));
 		btnSolicitacoes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -376,7 +376,7 @@ public class DialogControleMaterial extends JDialog {
 		btnSolicitacoes.setBounds(65, 508, 150, 23);
 		contentPane.add(btnSolicitacoes);
 		
-		JButton btnLiberar = new JButton("Liberar Sa\u00EDda");
+		JButton btnLiberar = new JButton("Liberar Saída");
 		btnLiberar.setBackground(new Color(255, 255, 255));
 		btnLiberar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -391,7 +391,7 @@ public class DialogControleMaterial extends JDialog {
 		btnLiberar.setBounds(777, 66, 149, 23);
 		contentPane.add(btnLiberar);
 		
-		JButton btnNewButton = new JButton("Lan\u00E7ar Entrada");
+		JButton btnNewButton = new JButton("Lançar Entrada");
 		btnNewButton.setBackground(new Color(255, 255, 255));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

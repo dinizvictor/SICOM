@@ -17,7 +17,6 @@ import br.cefet.sicom.documentos.GeradorDeTexto;
 import br.cefet.sicom.modelo.Material;
 import br.cefet.sicom.modelo.Solicitacao;
 import br.cefet.sicom.modelo.Solicitante;
-import br.cefet.sicom.modelo.TipoDeAcao;
 import br.cefet.sicom.sessao.Login;
 
 import java.awt.Color;
@@ -124,7 +123,7 @@ public class DialogConfirmaSolicitacao extends JDialog {
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JLabel lblConfirmaoDeSolicitao = new JLabel("Confirma\u00E7\u00E3o de Solicita\u00E7\u00E3o");
+		JLabel lblConfirmaoDeSolicitao = new JLabel("Confirmação de Solicitação");
 		lblConfirmaoDeSolicitao.setForeground(new Color(0, 0, 139));
 		lblConfirmaoDeSolicitao.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblConfirmaoDeSolicitao.setBounds(10, 11, 347, 23);
@@ -161,7 +160,7 @@ public class DialogConfirmaSolicitacao extends JDialog {
 		lblNewLabel.setBounds(10, 70, 46, 14);
 		contentPanel.add(lblNewLabel);
 		
-		JLabel lblOcupao = new JLabel("Ocupa\u00E7\u00E3o:");
+		JLabel lblOcupao = new JLabel("Ocupação:");
 		lblOcupao.setForeground(new Color(0, 0, 128));
 		lblOcupao.setBounds(10, 95, 74, 14);
 		contentPanel.add(lblOcupao);
