@@ -188,7 +188,6 @@ public class DialogAtualizaMaterial extends JDialog {
 				if(!descricaoTF.getText().isEmpty() && !saldoTF.getText().isEmpty() && tipoUnidCB.getSelectedIndex() != -1){	
 					
 					Material m = materiaisTC.get(materiaisTableTC.getSelectedRow());
-					Material mCopia = m;
 									
 					m.setDescricao(descricaoTF.getText()); 
 					m.setSaldo(Integer.parseInt(saldoTF.getText()));
@@ -197,9 +196,7 @@ public class DialogAtualizaMaterial extends JDialog {
 					m.setLocalizacao(localizacaoCB.getSelectedItem().toString());
 					
 					MaterialDao.atualizar(m);
-					Calendar c = new GregorianCalendar();
-					//Movimentacao mov = new Movimentacao(0, TipoDeAcao.ATUALIZACAO_DE_MATERIAL, mCopia.getIdMaterial()+"|"+mCopia.getDescricao()+"|"+mCopia.getCategoria()+"|"+mCopia.getLocalizacao()+"|"+mCopia.getSaldo()+"|"+mCopia.getTipoUnid(), c, l.getUsuario());
-					//MovimentacaoDao.cadastrar(mov);
+					
 					JOptionPane.showMessageDialog(null, "Atualização Realizada!");
 					
 					refreshTable(ordenarCBTC, materiaisTC, pesquisaTFTC, objetosTC, materiaisTableTC);

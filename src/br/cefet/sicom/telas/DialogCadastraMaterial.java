@@ -155,10 +155,6 @@ public class DialogCadastraMaterial extends JDialog {
 						
 						MaterialDao.cadastrar(m);
 						
-						Calendar c = new GregorianCalendar();
-						//Movimentacao mov = new Movimentacao(0, TipoDeAcao.CADASTRO_DE_MATERIAL, m.getDescricao()+"|"+m.getCategoria()+"|"+m.getLocalizacao()+"|"+m.getSaldo()+"|"+m.getTipoUnid(), c, l.getUsuario());
-						//MovimentacaoDao.cadastrar(mov);
-						
 						JOptionPane.showMessageDialog(null, "Cadastro Realizado!");
 						
 						refreshTable(ordenarCB, materiais, pesquisaTF, objetos, materiaisTable);

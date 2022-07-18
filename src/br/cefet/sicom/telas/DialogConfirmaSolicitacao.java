@@ -97,7 +97,7 @@ public class DialogConfirmaSolicitacao extends JDialog {
 		materiaisTable.setModel(new DefaultTableModel(
 			objetos,
 			new String[] {
-				"Id", "Descri\u00E7\u00E3o", "Tipo de Unid.", "Saldo", "Categoria", "Localiza\u00E7\u00E3o"
+				"Id", "Descrição", "Tipo de Unid.", "Saldo", "Categoria", "Localização"
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {
@@ -192,9 +192,6 @@ public class DialogConfirmaSolicitacao extends JDialog {
 										
 				}
 				
-				Calendar c = new GregorianCalendar();
-				//Movimentacao mov = new Movimentacao(0, TipoDeAcao.LIBERACAO_DE_MATERIAL, "Solicitante: "+solicitacao.get(0).getSolicitante(), calendar, l.getUsuario());
-				//MovimentacaoDao.cadastrar(mov);
 				
 				GeradorDeTexto.gerarComprovanteSolicitacao(solicitacao, solicitante, calendar, l.getUsuario());
 				try {

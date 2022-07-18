@@ -59,7 +59,7 @@ public class TelaPrincipalComum extends JFrame {
 		btnCM.setBounds(10, 192, 336, 35);
 		contentPane.add(btnCM);
 		
-		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
+		JLabel lblUsurio = new JLabel("Usuário:");
 		lblUsurio.setForeground(new Color(0, 0, 128));
 		lblUsurio.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblUsurio.setBounds(10, 117, 83, 14);
@@ -70,7 +70,7 @@ public class TelaPrincipalComum extends JFrame {
 		lblSiape.setBounds(36, 140, 46, 14);
 		contentPane.add(lblSiape);
 		
-		JButton btnSair = new JButton("Encerrar Sess\u00E3o");
+		JButton btnSair = new JButton("Encerrar Sessão");
 		btnSair.setBackground(new Color(255, 255, 255));
 		btnSair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

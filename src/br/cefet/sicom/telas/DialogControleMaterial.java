@@ -124,7 +124,7 @@ public class DialogControleMaterial extends JDialog {
 		
 		ordenarCB = new JComboBox();
 		ordenarCB.addActionListener(new ActionListener() {
-			//Ao selecionar uma categoria de ordena��o >>
+			//Ao selecionar uma categoria de ordenação >>
 			public void actionPerformed(ActionEvent arg0) {
 				
 				refreshTable();
@@ -149,7 +149,7 @@ public class DialogControleMaterial extends JDialog {
 		pesquisaTF.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				//TipoDeOrdena��o
+				//TipoDeOrdenação
 				refreshTable();
 				materiaisTable.setForeground(new Color(0, 0, 128));
 				scrollPane.setViewportView(materiaisTable);

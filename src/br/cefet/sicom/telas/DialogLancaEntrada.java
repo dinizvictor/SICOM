@@ -85,7 +85,7 @@ public class DialogLancaEntrada extends JDialog {
 		materiaisTable.setModel(new DefaultTableModel(
 			objetos,
 			new String[] {
-				"Id", "Descri\u00E7\u00E3o", "Tipo de Unid.", "Saldo"
+				"Id", "Descrição", "Tipo de Unid.", "Saldo"
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {

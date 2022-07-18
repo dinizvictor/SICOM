@@ -96,7 +96,7 @@ public class DialogLiberaMaterial extends JDialog {
 		
 		solicitacao = new ArrayList<Solicitacao>();
 		
-		JLabel lblLiberaoDeMateriais = new JLabel("Libera\u00E7\u00E3o de Materiais");
+		JLabel lblLiberaoDeMateriais = new JLabel("Liberação de Materiais");
 		lblLiberaoDeMateriais.setForeground(new Color(0, 0, 139));
 		lblLiberaoDeMateriais.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblLiberaoDeMateriais.setBounds(10, 9, 414, 23);
@@ -268,7 +268,7 @@ public class DialogLiberaMaterial extends JDialog {
 						
 						}
 						else{
-							JOptionPane.showMessageDialog(null,"Digite uma quantidade v�lida!");
+							JOptionPane.showMessageDialog(null,"Digite uma quantidade válida!");
 						}
 						
 					}
@@ -287,12 +287,12 @@ public class DialogLiberaMaterial extends JDialog {
 		btnAdicionarMaterial.setBounds(359, 236, 95, 23);
 		contentPane.add(btnAdicionarMaterial);
 		
-		JLabel lblNewLabel = new JLabel("Materiais (Descri\u00E7\u00E3o - Saldo):");
+		JLabel lblNewLabel = new JLabel("Materiais (Descrição - Saldo):");
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setBounds(10, 111, 180, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Solicita\u00E7\u00E3o:");
+		JLabel lblNewLabel_1 = new JLabel("Solicitação:");
 		lblNewLabel_1.setForeground(new Color(0, 0, 128));
 		lblNewLabel_1.setBounds(464, 111, 74, 14);
 		contentPane.add(lblNewLabel_1);
@@ -318,7 +318,7 @@ public class DialogLiberaMaterial extends JDialog {
 					refreshListSolicitacao();
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "N�o existe nenhum material na lista de solicita��o!");
+					JOptionPane.showMessageDialog(null, "Não existe nenhum material na lista de solicitação!");
 				}
 				
 				
@@ -347,11 +347,11 @@ public class DialogLiberaMaterial extends JDialog {
 						refreshListSolicitacao();
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "Selecione um material da lista de solicita��o!");
+						JOptionPane.showMessageDialog(null, "Selecione um material da lista de solicitação!");
 					}
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "N�o existe nenhum material na lista de solicita��o!");
+					JOptionPane.showMessageDialog(null, "Não existe nenhum material na lista de solicitação!");
 				}
 				
 			}
@@ -395,11 +395,11 @@ public class DialogLiberaMaterial extends JDialog {
 									}
 									
 									else{
-										JOptionPane.showMessageDialog(null, "Digite um n�mero v�lido!");
+										JOptionPane.showMessageDialog(null, "Digite um n�mero válido!");
 									}
 								}
 								catch(NumberFormatException nfe){
-									JOptionPane.showMessageDialog(null, "Digite um n�mero v�lido!");
+									JOptionPane.showMessageDialog(null, "Digite um n�mero válido!");
 								}
 								
 								
@@ -413,11 +413,11 @@ public class DialogLiberaMaterial extends JDialog {
 						refreshListSolicitacao();
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "Selecione um material da lista de solicita��o!");
+						JOptionPane.showMessageDialog(null, "Selecione um material da lista de solicitação!");
 					}
 				}
 				else{
-					JOptionPane.showMessageDialog(null, "N�o existe nenhum material na lista de solicita��o!");
+					JOptionPane.showMessageDialog(null, "Não existe nenhum material na lista de solicitação!");
 				}
 				
 			}
@@ -430,7 +430,7 @@ public class DialogLiberaMaterial extends JDialog {
 		separator_1.setBounds(0, 449, 874, 2);
 		contentPane.add(separator_1);
 		
-		JButton btnFinalizarSolicitao = new JButton("Finalizar Solicita\u00E7\u00E3o");
+		JButton btnFinalizarSolicitao = new JButton("Finalizar Solicitação");
 		btnFinalizarSolicitao.setBackground(new Color(255, 255, 255));
 		btnFinalizarSolicitao.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -441,7 +441,7 @@ public class DialogLiberaMaterial extends JDialog {
 						
 					}
 					else{
-						JOptionPane.showMessageDialog(null, "Nenhum material na solicita��o!");
+						JOptionPane.showMessageDialog(null, "Nenhum material na solicitação!");
 					}
 				
 				}

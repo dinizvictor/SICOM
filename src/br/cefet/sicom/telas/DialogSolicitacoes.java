@@ -79,7 +79,7 @@ public class DialogSolicitacoes extends JDialog {
 		}
 			
 				
-		String [] colunas = new String[] {"Id", "Data", "Qtd Fornecida", "Solicitante", "Usu\u00E1rio"};
+		String [] colunas = new String[] {"Id", "Data", "Qtd Fornecida", "Solicitante", "Usuário"};
 				
 		Object [][] objetos = new Object[solicitacoes.size()][5];
 		for(int i = 0; i < solicitacoes.size(); i++){
@@ -142,7 +142,7 @@ public class DialogSolicitacoes extends JDialog {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblSolicitaessadas = new JLabel("Solicita\u00E7\u00F5es (Sa\u00EDdas)");
+		JLabel lblSolicitaessadas = new JLabel("Solicitações (Saídas)");
 		lblSolicitaessadas.setForeground(new Color(0, 0, 139));
 		lblSolicitaessadas.setFont(new Font("Calibri", Font.PLAIN, 23));
 		lblSolicitaessadas.setBounds(10, 11, 738, 34);
@@ -162,14 +162,14 @@ public class DialogSolicitacoes extends JDialog {
 		materialLabel.setBounds(76, 45, 708, 14);
 		contentPane.add(materialLabel);
 		
-		JLabel label_3 = new JLabel("Per\u00EDodo:");
+		JLabel label_3 = new JLabel("Período:");
 		label_3.setForeground(new Color(0, 0, 128));
 		label_3.setBounds(10, 67, 62, 14);
 		contentPane.add(label_3);
 		
 		mesCB = new JComboBox();
 		mesCB.setForeground(new Color(0, 0, 128));
-		mesCB.setModel(new DefaultComboBoxModel(new String[] {"", "Janeiro", "Fevereiro", "Mar\u00E7o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}));
+		mesCB.setModel(new DefaultComboBoxModel(new String[] {"", "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}));
 		mesCB.setBounds(62, 64, 95, 20);
 		contentPane.add(mesCB);
 		
@@ -300,13 +300,13 @@ public class DialogSolicitacoes extends JDialog {
 					}
 					else{
 					
-						JOptionPane.showMessageDialog(null, "Nenhuma solicita��o selecionada!");
+						JOptionPane.showMessageDialog(null, "Nenhuma solicitação selecionada!");
 					}
 					
 				}
 				else{
 					
-					JOptionPane.showMessageDialog(null, "N�o existem solicita��es!");
+					JOptionPane.showMessageDialog(null, "Não existem solicitações!");
 				}
 				
 			}
