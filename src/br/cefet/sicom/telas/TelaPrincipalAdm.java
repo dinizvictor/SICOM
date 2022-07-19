@@ -74,19 +74,6 @@ public class TelaPrincipalAdm extends JFrame {
 		btnControle.setBounds(10, 192, 328, 35);
 		panel.add(btnControle);
 		
-		JButton btnVisualizarMovimentaes = new JButton("Visualizar Movimentações");
-		btnVisualizarMovimentaes.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				
-				
-			}
-		});
-		btnVisualizarMovimentaes.setBackground(new Color(255, 255, 255));
-		btnVisualizarMovimentaes.setForeground(new Color(0, 0, 128));
-		btnVisualizarMovimentaes.setBounds(10, 238, 328, 35);
-		panel.add(btnVisualizarMovimentaes);
-		
 		JButton btnCadastrarUsurios = new JButton("Cadastrar Usuários");
 		btnCadastrarUsurios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -98,7 +85,7 @@ public class TelaPrincipalAdm extends JFrame {
 		});
 		btnCadastrarUsurios.setBackground(new Color(255, 255, 255));
 		btnCadastrarUsurios.setForeground(new Color(0, 0, 128));
-		btnCadastrarUsurios.setBounds(10, 284, 328, 35);
+		btnCadastrarUsurios.setBounds(10, 235, 328, 35);
 		panel.add(btnCadastrarUsurios);
 		
 		JLabel lbNome = new JLabel(l.getUsuario().getNome());
@@ -125,7 +112,7 @@ public class TelaPrincipalAdm extends JFrame {
 		});
 		btnRelatrios.setBackground(new Color(255, 255, 255));
 		btnRelatrios.setForeground(new Color(0, 0, 128));
-		btnRelatrios.setBounds(10, 330, 328, 35);
+		btnRelatrios.setBounds(10, 281, 328, 35);
 		panel.add(btnRelatrios);
 		
 		JButton btnSair = new JButton("Encerrar Sessão");

@@ -60,7 +60,7 @@ public static void cadastrar(Entrada entrada){
 	
 	public static void atualizar(Entrada entrada){
 		
-		String sql = "UPDATE entrada SET qtd = ?, empenho = ?, fornecedor = ?, data = ?  WHERE idMaterial = " + entrada.getIdEntrada();
+		String sql = "UPDATE entrada SET qtd = ?, empenho = ?, fornecedor = ?, dataEntrada = ?  WHERE idMaterial = " + entrada.getIdEntrada();
 		try {
 			
 			Connection c = Conexao.abrir();
@@ -97,7 +97,7 @@ public static void cadastrar(Entrada entrada){
             	
             	entrada = new Entrada();
             	Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
             	entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));
@@ -137,7 +137,7 @@ public static void cadastrar(Entrada entrada){
 				entrada = new Entrada();
 				entrada.setIdEntrada(rs.getInt("idEntrada"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
 				entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));
@@ -179,7 +179,7 @@ public static void cadastrar(Entrada entrada){
 				
 				entrada.setIdEntrada(rs.getInt("idEntrada"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
 				entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));
@@ -220,7 +220,7 @@ public static void cadastrar(Entrada entrada){
 				
 				entrada.setIdEntrada(rs.getInt("idEntrada"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
 				entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));
@@ -246,7 +246,7 @@ public static void cadastrar(Entrada entrada){
 	
 	public static ArrayList<Entrada> listarPorFornecedorSubString(Material m, String fornecedor, int mes, int ano){
 		
-		String sql = "SELECT * FROM entrada where idMaterial = "+ m.getIdMaterial() +" AND fornecedor like '%"+fornecedor+"%' AND MONTH(data) = '"+ String.valueOf(mes) +"' AND YEAR(data) = '"+ String.valueOf(ano) +"'";
+		String sql = "SELECT * FROM entrada where idMaterial = "+ m.getIdMaterial() +" AND fornecedor like '%"+fornecedor+"%' AND MONTH(dataEntrada) = '"+ String.valueOf(mes) +"' AND YEAR(dataEntrada) = '"+ String.valueOf(ano) +"'";
 		ArrayList<Entrada> entradas = new ArrayList<Entrada>();
 		try {
 			
@@ -261,7 +261,7 @@ public static void cadastrar(Entrada entrada){
 				
 				entrada.setIdEntrada(rs.getInt("idEntrada"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
 				entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));
@@ -287,7 +287,7 @@ public static void cadastrar(Entrada entrada){
 	
 	public static ArrayList<Entrada> listarPorEmpenhoSubString(Material m, String empenho, int mes, int ano){
 		
-		String sql = "SELECT * FROM entrada WHERE idMaterial = "+ m.getIdMaterial() +" AND empenho like '%"+empenho+"%' AND MONTH(data) = '"+ String.valueOf(mes) +"' AND YEAR(data) = '"+ String.valueOf(ano) +"'";
+		String sql = "SELECT * FROM entrada WHERE idMaterial = "+ m.getIdMaterial() +" AND empenho like '%"+empenho+"%' AND MONTH(dataEntrada) = '"+ String.valueOf(mes) +"' AND YEAR(dataEntrada) = '"+ String.valueOf(ano) +"'";
 		ArrayList<Entrada> entradas = new ArrayList<Entrada>();
 		try {
 			
@@ -302,7 +302,7 @@ public static void cadastrar(Entrada entrada){
 				
 				entrada.setIdEntrada(rs.getInt("idEntrada"));
 				Calendar calendar = Calendar.getInstance();
-				calendar.setTime(rs.getDate("data"));
+				calendar.setTime(rs.getDate("dataEntrada"));
 				entrada.setData(calendar);
 				entrada.setEmpenho(rs.getString("empenho"));
             	entrada.setFornecedor(rs.getString("fornecedor"));

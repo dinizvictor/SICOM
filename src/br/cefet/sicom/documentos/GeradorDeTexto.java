@@ -85,7 +85,7 @@ public class GeradorDeTexto {
 	}
 	
 	public static String obterNomeMes(int mes){
-	    String[] meses = {"Janeiro", "Fevereiro", "Mar�o", "Abril", "Maio", "Junho", "Julho", 
+	    String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", 
 	                      "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
 	    return meses[mes-1];
 	}
@@ -139,7 +139,7 @@ public class GeradorDeTexto {
 				
 			}
 			
-			Paragraph p4 = new Paragraph("\n\n\n_______________________________________\nSolicitante: "+ solicitante.getNome()+ " ("+ solicitante.getSiape() +")" +"\n\n_______________________________________\nAlmoxarife (Usu�rio): "+u.getNome()+ " ("+ u.getSiape() +")", f3);
+			Paragraph p4 = new Paragraph("\n\n\n_______________________________________\nSolicitante: "+ solicitante.getNome()+ " ("+ solicitante.getSiape() +")" +"\n\n_______________________________________\nAlmoxarife (Usuário): "+u.getNome()+ " ("+ u.getSiape() +")", f3);
 			p4.setAlignment(Element.ALIGN_CENTER);
 			
 			doc.add(p1);
@@ -212,96 +212,6 @@ public class GeradorDeTexto {
 			logo.scalePercent(40f);
 							
 			Paragraph p2 = new Paragraph("Relatório de Consumo Mensal\n"+ obterNomeMes(mes) +"\n", f2);
-			p2.setAlignment(Element.ALIGN_CENTER);
-			
-			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
-			p3.setAlignment(Element.ALIGN_CENTER);
-			
-			PdfPTable table = new PdfPTable(8);
-			
-			table.addCell(new Phrase("ID Solicitação",f1));
-			table.addCell(new Phrase("ID Material",f1));
-			table.addCell(new Phrase("Material",f1));
-			table.addCell(new Phrase("Qtd Fornecida",f1));
-			table.addCell(new Phrase("Solicitante",f1));
-			table.addCell(new Phrase("Siape",f1));
-			table.addCell(new Phrase("Usuário",f1));
-			table.addCell(new Phrase("Data",f1));
-						
-			for(Solicitacao s : solicitacoes){
-				
-				table.addCell(new Phrase(String.valueOf(s.getIdSolicitacao()),f3));
-				table.addCell(new Phrase(String.valueOf(s.getMaterial().getIdMaterial()),f3));
-				table.addCell(new Phrase(s.getMaterial().getDescricao(),f3));
-				table.addCell(new Phrase(String.valueOf(s.getQtdFornecida()),f3));
-				table.addCell(new Phrase(s.getSolicitante().getNome(),f3));
-				table.addCell(new Phrase(String.valueOf(s.getSolicitante().getSiape()),f3));
-				table.addCell(new Phrase(s.getUsuario().getNome(),f3));
-				table.addCell(new Phrase(formatDate.format(s.getData().getTime()),f3));
-				
-			}
-			
-			Paragraph p4 = new Paragraph("\n\n\nGerado por: "+u.getNome()+ " ("+ u.getSiape() +")", f3);
-			p4.setAlignment(Element.ALIGN_CENTER);
-			
-			doc.add(p1);
-			doc.add(logo);
-			doc.add(p2);
-			doc.add(p3);
-			doc.add(table);												
-			doc.add(p4);
-												
-		}	
-		 catch (DocumentException e) {
-			
-			JOptionPane.showMessageDialog(null, e.getMessage());
-			
-		}
-		 catch (IOException e){
-			 
-			JOptionPane.showMessageDialog(null, e.getMessage());
-			 
-		 }
-		finally {
-			
-			if(doc != null)
-				doc.close();
-			
-									
-												
-		}
-				
-	}
-	
-	public static void gerarRelatorioElanConsumo(Calendar calendar, Usuario u, int mes, int ano){
-		
-		Document doc = null;
-		FileOutputStream os = null;
-		
-		ArrayList<Solicitacao> solicitacoes = SolicitacaoDao.listarManutencao();
-		
-		SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
-				
-		try {
-			
-			doc = new Document(PageSize.A4, 30, 30, 30, 30);
-			os = new FileOutputStream(getEnderecoRelatorio("RelatorioConsumoMensal", calendar));
-							
-			PdfWriter.getInstance(doc, os);
-			doc.open();
-			
-			Font f1 = new Font(FontFamily.HELVETICA, 8, Font.BOLD);
-			Font f2 = new Font(FontFamily.HELVETICA, 14);
-			Font f3 = new Font(FontFamily.HELVETICA, 8);
-			
-			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
-			p1.setAlignment(Element.ALIGN_CENTER);
-			
-			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
-			logo.setAlignment(Element.ALIGN_CENTER);
-			logo.scalePercent(40f);
-							
-			Paragraph p2 = new Paragraph("Relatório de Consumo da Manutenção\n"+ obterNomeMes(mes) +"\n", f2);
 			p2.setAlignment(Element.ALIGN_CENTER);
 			
 			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
@@ -534,11 +444,95 @@ public class GeradorDeTexto {
 			
 			if(doc != null)
 				doc.close();
+										
+		}
+				
+	}
+
+	public static void gerarRelatorioSolicitacoes(Calendar calendar) {
+		
+		Document doc = null;
+		FileOutputStream os = null;
+		
+		ArrayList<Solicitacao> solicitacoes = SolicitacaoDao.listarTodos();
+		
+		SimpleDateFormat formatDate = new SimpleDateFormat("dd-MM-yyyy");
+				
+		try {
+			
+			doc = new Document(PageSize.A4, 30, 30, 30, 30);
+			os = new FileOutputStream(getEnderecoRelatorio("RelatorioConsumoAnual", calendar));
+							
+			PdfWriter.getInstance(doc, os);
+			doc.open();
+			
+			Font f1 = new Font(FontFamily.HELVETICA, 8, Font.BOLD);
+			Font f2 = new Font(FontFamily.HELVETICA, 14);
+			Font f3 = new Font(FontFamily.HELVETICA, 8);
+			
+			Paragraph p1 = new Paragraph("CEFET-RJ\nCampus Nova Iguaçu\nAlmoxarifado\n", f2);
+			p1.setAlignment(Element.ALIGN_CENTER);
+			
+			Image logo = Image.getInstance(GeradorDeTexto.class.getResource("/br/cefet/sicom/img/logo.png"));
+			logo.setAlignment(Element.ALIGN_CENTER);
+			logo.scalePercent(40f);
+							
+			Paragraph p2 = new Paragraph("Relatório Geral de Solicitações\n", f2);
+			p2.setAlignment(Element.ALIGN_CENTER);
+			
+			Paragraph p3 = new Paragraph("Data: " + formatDate.format(calendar.getTime()) + "\nHora: " + calendar.get(Calendar.HOUR_OF_DAY) +":"+ calendar.get(Calendar.MINUTE) +":"+ calendar.get(Calendar.SECOND) + "\n\n", f2);
+			p3.setAlignment(Element.ALIGN_CENTER);
+			
+			PdfPTable table = new PdfPTable(8);
+			
+			table.addCell(new Phrase("ID Solicitação",f1));
+			table.addCell(new Phrase("ID Material",f1));
+			table.addCell(new Phrase("Material",f1));
+			table.addCell(new Phrase("Qtd Fornecida",f1));
+			table.addCell(new Phrase("Solicitante",f1));
+			table.addCell(new Phrase("Siape",f1));
+			table.addCell(new Phrase("Usuário",f1));
+			table.addCell(new Phrase("Data",f1));
+						
+			for(Solicitacao s : solicitacoes){
+				
+				table.addCell(new Phrase(String.valueOf(s.getIdSolicitacao()),f3));
+				table.addCell(new Phrase(String.valueOf(s.getMaterial().getIdMaterial()),f3));
+				table.addCell(new Phrase(s.getMaterial().getDescricao(),f3));
+				table.addCell(new Phrase(String.valueOf(s.getQtdFornecida()),f3));
+				table.addCell(new Phrase(s.getSolicitante().getNome(),f3));
+				table.addCell(new Phrase(String.valueOf(s.getSolicitante().getSiape()),f3));
+				table.addCell(new Phrase(s.getUsuario().getNome(),f3));
+				table.addCell(new Phrase(formatDate.format(s.getData().getTime()),f3));
+				
+			}
+			
+			doc.add(p1);
+			doc.add(logo);
+			doc.add(p2);
+			doc.add(p3);
+			doc.add(table);												
+												
+		}	
+		 catch (DocumentException e) {
+			
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			
+		}
+		 catch (IOException e){
+			 
+			JOptionPane.showMessageDialog(null, e.getMessage());
+			 
+		 }
+		finally {
+			
+			if(doc != null)
+				doc.close();
 			
 									
 												
 		}
-				
+		
 	}
 	
 

@@ -86,7 +86,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -112,7 +112,7 @@ public class SolicitacaoDao {
 	
 	public static ArrayList<Solicitacao> listarPorMes(int mes, int ano){
 		
-		String sql = "SELECT * FROM solicitacao where MONTH(data) = '"+ String.valueOf(mes) +"' AND YEAR(data) = '"+ String.valueOf(ano)+"'";
+		String sql = "SELECT * FROM solicitacao where MONTH(dataSolicitacao) = '"+ String.valueOf(mes) +"' AND YEAR(dataSolicitacao) = '"+ String.valueOf(ano)+"'";
 		ArrayList<Solicitacao> solicitacoes = new ArrayList<Solicitacao>();
 		try {
 			
@@ -129,7 +129,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -172,7 +172,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -198,7 +198,7 @@ public class SolicitacaoDao {
 	
 	public static ArrayList<Solicitacao> listarPorAno(int ano){
 		
-		String sql = "SELECT * FROM solicitacao where YEAR(data) = '"+ String.valueOf(ano)+"'";
+		String sql = "SELECT * FROM solicitacao where YEAR(dataSolicitacao) = '"+ String.valueOf(ano)+"'";
 		ArrayList<Solicitacao> solicitacoes = new ArrayList<Solicitacao>();
 		try {
 			
@@ -215,7 +215,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -257,7 +257,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -284,7 +284,7 @@ public class SolicitacaoDao {
 	
 	public static ArrayList<Solicitacao> listarPorMaterial(Material m, int mes, int ano){
 		
-		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +" AND MONTH(data) = '"+ String.valueOf(mes) +"' AND YEAR(data) = '"+ String.valueOf(ano) +"'";
+		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +" AND MONTH(dataSolicitacao) = '"+ String.valueOf(mes) +"' AND YEAR(dataSolicitacao) = '"+ String.valueOf(ano) +"'";
 		ArrayList<Solicitacao> solicitacoes = new ArrayList<Solicitacao>();
 		try {
 			
@@ -300,7 +300,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -327,7 +327,7 @@ public class SolicitacaoDao {
 	
 	public static ArrayList<Solicitacao> listarPorMaterial(Material m, int ano){
 		
-		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +"' AND YEAR(data) = '"+ String.valueOf(ano) +"'";
+		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +"' AND YEAR(dataSolicitacao) = '"+ String.valueOf(ano) +"'";
 		ArrayList<Solicitacao> solicitacoes = new ArrayList<Solicitacao>();
 		try {
 			
@@ -343,7 +343,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -386,7 +386,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -429,7 +429,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -456,7 +456,7 @@ public class SolicitacaoDao {
 	
 	public static ArrayList<Solicitacao> listarPorSolicitanteMaterial(Material m, Solicitante s, int mes, int ano){
 		
-		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +" AND idSolicitante = "+ s.getIdSolicitante() +" AND MONTH(data) = '"+ String.valueOf(mes) +"' AND YEAR(data) = '"+ String.valueOf(ano) +"'";
+		String sql = "SELECT * FROM solicitacao where idMaterial = "+ m.getIdMaterial() +" AND idSolicitante = "+ s.getIdSolicitante() +" AND MONTH(dataSolicitacao) = '"+ String.valueOf(mes) +"' AND YEAR(dataSolicitacao) = '"+ String.valueOf(ano) +"'";
 		ArrayList<Solicitacao> solicitacoes = new ArrayList<Solicitacao>();
 		try {
 			
@@ -472,7 +472,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
@@ -515,7 +515,7 @@ public class SolicitacaoDao {
 				solicitacao.setIdSolicitacao(rs.getInt("idSolicitacao"));
 				solicitacao.setQtdFornecida(rs.getInt("qtdFornecida"));
 				Calendar calendar = Calendar.getInstance();
-				String dataHoraString = rs.getString("data");
+				String dataHoraString = rs.getString("dataSolicitacao");
 				Date dataHora = format.parse(dataHoraString);
 				calendar.setTime(dataHora);
 				solicitacao.setData(calendar);
